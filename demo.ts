@@ -4,10 +4,14 @@
 // - Créer une constante nommée "addressFull" contenant la concaténation de ces deux variables, veillez à bien les typer.
 // - Faire s'afficher la constante "addressFull" dans la console du navigateur.
 
-const address: string = "Avenue de Vénaria";
-const zipcode: number = 453;
-const addressFull: string = zipcode + ", " + address;
-console.log(addressFull);
+function exercice1 () {
+    const address: string = "Avenue de Vénaria";
+    const zipcode: number = 453;
+    const addressFull: string = zipcode + ", " + address;
+    console.log(addressFull);
+}
+
+exercice1();
 // Exercice # 2
 
 // - Créer une fonction Javascript avec une constante contenant un tableau de vos 5 pays favoris, veillez à bien le typer.
