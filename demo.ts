@@ -49,12 +49,7 @@ decompose();
 const phrase_split: string[] = ['t','e','s','t'];
 
 function recompose() {
-    let temp: string = '';
-    for (let i = 0; i < phrase_split.length; i++){
-        temp = temp + phrase_split[i];
-    }
-    const phrase_recompose: string = temp;
-    temp = '';
+    const phrase_recompose: string = phrase_split.join('');
     console.log(phrase_recompose);
 }
 
