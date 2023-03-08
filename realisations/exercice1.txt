@@ -1,0 +1,66 @@
+EXO 1 
+
+Récupérer le ticket du client
+Mettre le ticket du client dans la machine
+Regarder si le ticket du client est gagnant ou non
+Si le ticket est gagnat : 
+    Dire au client qu'il a gagné
+    Féliciter le client
+    Lui remettre son lot
+Si le tiket est perdant
+    Dire au client qu'il a perdu
+    L'inviter à rejouer
+    S'il accepte 
+        lui créer un nouveau ticket
+        lui donner le ticket
+        Le remercier
+        Lui souhaiter une bonne journée
+    S'il refuse
+        Lui souhaiter une bonne journée
+
+---------------------------------------------------------------------------------
+
+Exo 2 
+
+Prendre le ticket
+Dérouler le ticket au maximum
+Tant qu'il a une ligne de produit sur le ticket : 
+    Ajouter le prix du produit au total
+Calculer les 20% de TVA du total
+Ajouter le résultat précédent au total
+Annoncer le prix total avec TVA au client
+
+---------------------------------------------------------------------------------
+
+EXO 3
+
+const organism: string = "Simplon"
+const learners: number = 15
+const promotionStarted: boolean = true
+const learnerNames: Array = ["Vincent", "Toufik", "Tom", "Samuel", "Orhan"]
+const pedagogicalReferent: Object = { name: "Tiphaine", work: "Simplon" }
+const absentLearner: any = undefined
+const excludedLearner: unknow = unknow
+
+// EXO 4
+
+var country = "France";
+function exercice4() {
+    console.log(country);
+}
+
+exercice4();
+
+---------------------------------------------------------------------------------
+
+
+// Exo 5
+
+const firstName: string = "David";
+const lastName: string = "BAKALARZ";
+
+function exercice5{
+    console.log(firstName + " " + lastName);
+}
+
+exercice5();
