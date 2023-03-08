@@ -50,6 +50,7 @@ function recompose() {
         temp = temp + phrase_split[i];
     }
     const phrase_recompose: string = temp;
+    temp = '';
     console.log(phrase_recompose);
 }
 
