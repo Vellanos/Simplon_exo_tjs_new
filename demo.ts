@@ -1,19 +1,56 @@
-// Système de constante et variable
-// Différent types
+// Exercice # 1
 
-const firstName: string = 'Kévin';
-const lastName: string = 'Wolff'; 
+// - Créer une fonction Javascript avec deux constantes nommées : "address" et "zipCode", la première est une string, la seconde est un nombre, veillez à bien les typer.
+// - Créer une constante nommée "addressFull" contenant la concaténation de ces deux variables, veillez à bien les typer.
+// - Faire s'afficher la constante "addressFull" dans la console du navigateur.
 
-const age: number = 30
+const address: string = "Avenue de Vénaria";
+const zipcode: number = 453;
+const addressFull: string = zipcode + ", " + address;
+console.log(addressFull);
+// Exercice # 2
 
-const isHeWakeUp: boolean = false;
+// - Créer une fonction Javascript avec une constante contenant un tableau de vos 5 pays favoris, veillez à bien le typer.
+// - À l'aide d'une boucle, itérrer dans ce tableau et afficher chaque valeur dans la console du navigateur.
 
-// Tableau
-const learners: any[] = ['Kevin', 30, true]
-
-// Objet
-const learner: any = {
-    name: 'Kevin',
-    age: 30,
-    wakeUp: false
+const tableau: string[] = ['France', 'Italie', 'Suisse', 'Espagne', 'Angleterre'];
+function pays() {
+    for (let i = 0; i < tableau.length; i++) {
+        console.log(tableau[i]);
+    } 
 }
+pays();
+
+
+
+// Exercice # 3
+
+// - Créer une fonction Javascript pour décomposer une string, exemple : ma phrase : "developpement", resultat souhaité : [d, e, v, e, l, o, p, p, e, m, e, n, t]
+// - Le resultat est stocké dans une constante correctement typée dont vous afficherez la valeur dans la console du navigateur.
+
+const ma_phrase: string = "test";
+
+function decompose() {
+    const ma_phrase_split: string[] = ma_phrase.split('');
+    console.log(ma_phrase_split);
+}
+
+decompose();
+
+// Exercice # 4
+
+// - Créer une fonction Javascript pour recomposer une string, exemple : ma phrase décomposée : [d, e, v, e, l, o, p, p, e, m, e, n, t], résultat souhaité : "developpement"
+// - Le resultat est stockée dans une constante correctement typée dont vous afficherez la valeur dans la console du navigateur.
+
+const phrase_split: string[] = ['t','e','s','t'];
+
+function recompose() {
+    let temp: string = '';
+    for (let i = 0; i < phrase_split.length; i++){
+        temp = temp + phrase_split[i];
+    }
+    const phrase_recompose: string = temp;
+    console.log(phrase_recompose);
+}
+
+recompose();
