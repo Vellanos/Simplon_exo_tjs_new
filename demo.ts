@@ -54,3 +54,126 @@ function recompose() {
 }
 
 recompose();
+
+
+// Partie 3 exo 1
+
+console.log("--------------Partie 3 exo 1 ------------");
+const data: string[] = ['Théo', 'Martin','Lucas','Antoine','Etienne'];
+
+for (let i = 0; i < data.length; i++){
+    if (data[i].length <= 5) {
+        console.log(data[i]);
+    }
+}
+
+// Partie 3 exo 2
+
+console.log("--------------Partie 3 exo 2 ------------");
+
+const countries: string[] = ['France', 'Italie', 'Suisse', 'Belgique', 'Espagne'];
+let sentence: string = '';
+
+for (let i = 0; i < countries.length - 1; i++){
+    sentence = sentence + countries[i] + ', ';
+}
+sentence = sentence + countries[countries.length-1];
+console.log(sentence);
+
+// Partie 3 exo 3
+
+console.log("--------------Partie 3 exo 3 ------------");
+
+const numbers: number[] = [123, 999, 340, 12390];
+let results: number[] = [];
+
+for (let i = 0; i < numbers.length; i++){
+    results.push(numbers[i]*180);
+}
+console.log(results);
+
+// Partie 3 exo 4
+
+console.log("--------------Partie 3 exo 4 ------------");
+
+interface Person {
+    name: string;
+    surname: string;
+    age: number;
+}
+
+const person: Person = {
+    name: "Marchal",
+    surname: "Mickeal",
+    age: 19
+}
+
+if (person.age >= 18){
+    console.log("Majeur");
+} else {
+    console.log("Mineur");
+}
+
+// Partie 3 exo 5
+
+console.log("--------------Partie 3 exo 5 ------------");
+
+interface Moi {
+    nom: string;
+    prenom: string;
+    age: number;
+}
+
+const moi: Moi = {
+    nom: "BAKALARZ",
+    prenom: "David",
+    age: 23
+}
+
+console.log("Bonjour mon nom est " + moi.nom + " " + moi.prenom + ", j'ai " + moi.age + " ans");
+
+// Partie 3 exo 6
+
+console.log("--------------Partie 3 exo 6 ------------");
+
+interface Famille {
+    nom: string;
+    prenom: string;
+    age: number;
+}
+
+const papa: Famille = {
+    nom: "BAKALARZ",
+    prenom: "Franck",
+    age: 51
+}
+
+const maman: Famille = {
+    nom: "VAZ",
+    prenom: "Marie",
+    age: 54
+}
+
+const soeur: Famille = {
+    nom: "BAKALARZ",
+    prenom: "Manon",
+    age: 19
+}
+
+const moi_2: Moi = {
+    nom: "BAKALARZ",
+    prenom: "David",
+    age: 23
+}
+
+const oncle: Moi = {
+    nom: "VAZ",
+    prenom: "Adelio",
+    age: 52
+}
+
+const tableau_famille: Famille[] = [papa, maman, soeur, moi_2, oncle];
+
+for (let i = 0; i < tableau_famille.length; i++){
+    console.log("Bonjour mon nom est " + tableau_famille[i].nom + " " + tableau_famille[i].prenom + ", j'ai " + tableau_famille[i].age + " ans");
+}
