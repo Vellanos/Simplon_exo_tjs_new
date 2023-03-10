@@ -217,6 +217,7 @@ const students: student[] = [
 
 let tableau_majeur: student[] = [];
 let tableau_mineur: student[] = [];
+let sum: number = 0;
 
 for (let i = 0; i < students.length; i++){
     if (students[i].age >= 18){
@@ -224,10 +225,14 @@ for (let i = 0; i < students.length; i++){
     } else {
         tableau_mineur.push(students[i])
     }
+    sum = sum + students[i].age
 }
 
-console.log(tableau_majeur)
-console.log(tableau_mineur)
+let mean: number = sum / students.length;
+
+console.log(tableau_majeur);
+console.log(tableau_mineur);
+console.log("la moyenne d'âge est de " + mean);
 
 console.log("--------------Partie 4 exo 2 ------------");
 
