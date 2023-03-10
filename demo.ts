@@ -177,3 +177,152 @@ const tableau_famille: Famille[] = [papa, maman, soeur, moi_2, oncle];
 for (let i = 0; i < tableau_famille.length; i++){
     console.log("Bonjour mon nom est " + tableau_famille[i].nom + " " + tableau_famille[i].prenom + ", j'ai " + tableau_famille[i].age + " ans");
 }
+
+console.log("--------------Partie 4 exo 1 ------------");
+
+// Exercice # 1
+
+// Typer la constante "students"
+// Séparer les étudiants majeurs et non-majeurs dans deux tableaux différents.
+// Faite la moyenne de l'âge des étudiants
+
+interface student {
+    name: string;
+    age: number;
+    major: boolean;
+}
+
+const students: student[] = [
+    {
+        name: 'Paul',
+        age: 19,
+        major: true
+    },
+    {
+        name: 'Julie',
+        age: 16,
+        major: false
+    },
+    {
+        name: 'Jacques',
+        age: 49,
+        major: true
+    },
+    {
+        name: 'Marie',
+        age: 12,
+        major: false
+    }
+]
+
+let tableau_majeur: student[] = [];
+let tableau_mineur: student[] = [];
+
+for (let i = 0; i < students.length; i++){
+    if (students[i].age >= 18){
+        tableau_majeur.push(students[i])
+    } else {
+        tableau_mineur.push(students[i])
+    }
+}
+
+console.log(tableau_majeur)
+console.log(tableau_mineur)
+
+console.log("--------------Partie 4 exo 2 ------------");
+
+// Exercice 2
+
+// Typer la constante "fruits"
+// Séparer les fruits avec un date de péremption de : 
+// - moins de deux jours ( <= 2)
+// - entre trois jours et une semaine ( >= 3 et <= 7)
+// - plus d'une semaine ( > 7)
+
+interface fruit {
+    name: string;
+    expirationInDays: number;
+}
+
+const fruits = [
+    {
+        name: 'Pomme',
+        expirationInDays: 1
+    },
+    {
+        name: 'Poire',
+        expirationInDays: 16
+    },
+    {
+        name: 'Citron',
+        expirationInDays: 5
+    },
+    {
+        name: 'Tomate',
+        expirationInDays: 4
+    }
+]
+
+const fruit_moins_2: string[] = [];
+const fruit_3_7: string[] = [];
+const fruit_plus_7: string[] = [];
+
+for (let i = 0; i < fruits.length; i++){
+    if (fruits[i].expirationInDays <= 2){
+        fruit_moins_2.push(fruits[i].name)
+    } else if (fruits[i].expirationInDays >= 3 && fruits[i].expirationInDays <= 7) {
+        fruit_3_7.push(fruits[i].name)
+    } else {
+        fruit_plus_7.push(fruits[i].name)
+    }
+}
+
+console.log(fruit_moins_2);
+console.log(fruit_3_7);
+console.log(fruit_plus_7);
+
+
+console.log("--------------Partie 4 exo 3 ------------");
+
+// Exercice 3
+
+// Typer la constante "players"
+// Pour chaque joueur afficher dans la console un message comme celui-ci :
+// "<nom_du_joueur> possède les cartes : <carte_1>, <carte_2>, <carte_3>, <carte .......>"
+
+interface player {
+    name: string;
+    cards: string[];
+}
+
+const players = [
+    {
+        name: 'Marie',
+        cards: ['Dracofeu', 'Chenipan', 'Rondoudou']
+    },
+    {
+        name: 'Bilal',
+        cards: ['Mew', 'Tortank']
+    },
+    {
+        name: 'Sarah',
+        cards: ['Dracoloss', 'Dardagnan', 'Roucoul']
+    },
+    {
+        name: 'Joe',
+        cards: ['Roucoups', 'Colosinge', 'Insecateur', 'Tignon']
+    }
+]
+
+let exo3_phrase: string = '';
+
+for (let i = 0; i < players.length; i++){
+    exo3_phrase = exo3_phrase + players[i].name + " possède les cartes : ";
+    for (let y = 0; y < players[i].cards.length; y++) {
+        exo3_phrase = exo3_phrase + players[i].cards[y] + ", "
+    }
+    exo3_phrase = exo3_phrase.slice(0, exo3_phrase.length - 1);
+    exo3_phrase = exo3_phrase.slice(0, exo3_phrase.length - 1);
+    console.log(exo3_phrase)
+    exo3_phrase = ''
+}
